@@ -20,13 +20,13 @@ class BasitLexer(Lexer):
 
      # yorum tokenleri
     @_(r'//.*') 
-    def COMMENT(self, t): 
+    def YORUM(self, t): 
         pass
   
     # yeni satır tokeni(sadece göstermek için)
   
     @_(r'\n+') 
-    def newline(self, t): 
+    def yeni_satir(self, t): 
         self.lineno = t.value.count('\n')
 
 
